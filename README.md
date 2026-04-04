@@ -1,3 +1,9 @@
+# NVM Version Changing
+https://stackoverflow.com/questions/53785383/how-to-change-node-js-version-with-nvm
+
+nvm install 24.14.1
+
+
 # JoesRobotShop
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0-next.9.
