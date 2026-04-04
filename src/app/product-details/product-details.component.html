@@ -1,4 +1,4 @@
-        <div class="product">
+   
             <img [src]="getImageUrl(product())" 
                [alt]="product().name" />
             <div class="details">
@@ -9,14 +9,13 @@
                     <p>Available Inventory: {{ availableInventory() }} </p>
                 </div>
             </div>
-            <div class="price">
-                
+            <div class="price">              
+
+                <p [ngClass]="getPriceClasses()">{{product().price | currency }}</p>   
+
                 @if (product().discount > 0) {
-                    <p>{{product().price * (1 - product().discount) | currency}} (Sale)</p>
-                }  @else {
-                    <p>{{product().price | currency }}</p>
-                }              
+                <p>{{product().price * (1 - product().discount) | currency}}</p>
+                }                          
                 
                 <button class="cta" (click)="addToCart($event)">Buy</button>
             </div>
-        </div>
